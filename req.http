@@ -1,0 +1,88 @@
+
+//read all users
+GET http://localhost:4000/user-api/users
+Cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imphc2h2aUBnbWFpbC5jb20iLCJpYXQiOjE3NzI4NzU5OTYsImV4cCI6MTc3Mjg3OTU5Nn0.v8I-UPNSbAbD5TpG13En6Xh4PrbHt4Qg6K7xKYctAiA; Path=/; HttpOnly; SameSite=Lax
+###
+//read a user by id
+GET http://localhost:4000/user-api/users/69abf0daf87a92f544c19d4d
+Cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imphc2h2aUBnbWFpbC5jb20iLCJpYXQiOjE3NzI4NzU5OTYsImV4cCI6MTc3Mjg3OTU5Nn0.v8I-UPNSbAbD5TpG13En6Xh4PrbHt4Qg6K7xKYctAiA; Path=/; HttpOnly; SameSite=Lax
+###
+//create new user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json 
+
+{
+    "username":"jashvi",
+    "password":"jashvi",
+    "email":"jashvi@gmail.com",
+    "age":"19"
+}
+
+###
+//user login
+POST http://localhost:4000/user-api/authi
+Content-Type: application/json
+
+{
+    "email":"jashvi@gmail.com",
+   "password":"jashvi"
+}
+###
+
+//update existing user
+PUT  http://localhost:4000/user-api/users/69abf0daf87a92f544c19d4d
+Cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imphc2h2aUBnbWFpbC5jb20iLCJpYXQiOjE3NzI4NzU5OTYsImV4cCI6MTc3Mjg3OTU5Nn0.v8I-UPNSbAbD5TpG13En6Xh4PrbHt4Qg6K7xKYctAiA; Path=/; HttpOnly; SameSite=Lax
+Content-Type: application/json
+
+{
+    "username":"bhanu",
+    "password":"bhanu",
+    "email":"bhanu@gmail.com",
+    "age":"26"
+}
+
+//delete a user by id
+###
+DELETE  http://localhost:4000/user-api/users/69abf0daf87a92f544c19d4d
+Cookie:token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imphc2h2aUBnbWFpbC5jb20iLCJpYXQiOjE3NzI4NzU5OTYsImV4cCI6MTc3Mjg3OTU5Nn0.v8I-UPNSbAbD5TpG13En6Xh4PrbHt4Qg6K7xKYctAiA; Path=/; HttpOnly; SameSite=Lax
+###
+
+
+//api for product
+
+//read all products
+GET http://localhost:4000/product-api/products
+Cookie:
+###
+
+//read a product by id
+GET http://localhost:4000/product-api/products/69abb6213e2eb05298bc6a4a
+
+###
+//create new product
+POST http://localhost:4000/product-api/products
+Content-Type: application/json 
+
+{
+    "productId":1,
+    "productName":"Laptop",
+    "price":40000,
+     "brand":"HP"
+}
+###
+//update existing product
+PUT  http://localhost:4000/product-api/products/69abb4f8ed989750c8ea6a8c
+Content-Type: application/json
+
+{
+    "productId":2,
+    "productName":"Mouse",
+    "price":700,
+    "brand":"xyz"
+    
+}
+###
+
+//delete a user by id
+DELETE  http://localhost:4000/product-api/products/69abb6213e2eb05298bc6a4a
+###
